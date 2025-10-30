@@ -12,7 +12,6 @@
       }
       history[channel].push(timestamp);
 
-      // Keep only last 50 visits per channel to avoid bloat
       if (history[channel].length > 50) {
         history[channel] = history[channel].slice(-50);
       }

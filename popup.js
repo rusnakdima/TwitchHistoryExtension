@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Sort channels by latest visit
     const sortedChannels = Object.keys(history).sort((a, b) => {
       const latestA = Math.max(...history[a]);
       const latestB = Math.max(...history[b]);
