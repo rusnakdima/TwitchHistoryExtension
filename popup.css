@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 380px;
+  height: 500px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0e0e10;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #9146ff 0%, #772ce8 100%);
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.twitch-icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.header-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+#history {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.empty-subtitle {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.channel-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(145, 70, 255, 0.3);
+  border-color: #9146ff;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9146ff, #772ce8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.channel-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.channel-name {
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time-ago {
+  color: #9ca3af;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.badge {
+  background: linear-gradient(135deg, #9146ff, #772ce8);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.visits-list {
+  max-height: 128px;
+  overflow-y: auto;
+}
+
+.visit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.visit-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.clock-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9146ff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #772ce8;
+}
