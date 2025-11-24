@@ -16,7 +16,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "twitch-history@yourdomain.com",
+      "id": "twitch-history@zen-browser",
       "strict_min_version": "109.0"
     }
   },
